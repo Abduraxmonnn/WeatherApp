@@ -1,11 +1,31 @@
+import datetime
+
 from django.shortcuts import render
 import requests
+from newsapi import NewsApiClient
+
 from .models import City
 from .forms import CityForm
 
 
 def main(request):
-    return render(request, 'weather/main.html')
+    newsApi = NewsApiClient(api_key='f97c460fe88f4acd87d698277576f2bc')
+    headLines = newsApi.get_top_headlines(sources='bbc, ign')
+    articles = headLines['articles']
+    desc = []
+    news = []
+    img = []
+    link = []
+
+    for i in range(len(articles)):
+        article = articles[i]
+        desc.append(article['description'])
+        news.append(article['title'])
+        img.append(article['urlToImage'])
+        link.append(article['url'])
+    mylist = zip(news, desc, img, link)
+
+    return render(request, "weather/main.html", context={"first_mylist": mylist})
 
 
 def info(request):
