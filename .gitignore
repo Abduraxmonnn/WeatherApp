@@ -2,5 +2,5 @@
 .venv
 venv
 *.pyc
-static
-media
+#static
+#media
