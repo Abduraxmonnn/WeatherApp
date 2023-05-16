@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+	#error-404
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#8.1	error-404-section
+--------------------------------------------------------------*/
+.error-404-section {
+	border-top: 1px solid #eaeaea;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+
+	@include media-query(991px) {
+		margin-top: 0;
+		height: calc(100vh - 89px);
+	}
+
+	.error-404-area {
+		max-width: 580px;
+		margin: 0 auto;
+	}
+
+	h2 {
+		font-size: 240px;
+		font-weight: 500;
+		line-height: 0.7em;
+		margin: 0 0 0.2em;
+
+		@include media-query(991px) {
+			font-size: 140px;
+		}
+
+	}
+
+	h3 {
+		font-size: 26px;
+		font-weight: 400;
+		margin: 0 0 1em;
+	}
+
+	p {
+		font-size: 17px;
+		margin: 0 0 3em;
+	}
+}
+
+.error-404-pg .header-default-style {
+
+	z-index: 12;
+}
+
+.error-404-pg {
+	position: relative;
+
+
+	&:before {
+		content: "";
+		width: 481px;
+		height: 670px;
+		@include background-style("../images/404-light.png", center center, cover, no-repeat, local);
+		position: absolute;
+		right: 25px;
+		top: 0;
+		z-index: 100;
+
+		@include media-query(1500px) {
+			width: 380px;
+			height: 529px;
+		}
+
+		@include media-query(1300px) {
+			display: none;
+		}
+	}
+
+}

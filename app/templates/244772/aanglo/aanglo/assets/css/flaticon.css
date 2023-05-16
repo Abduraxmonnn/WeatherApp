@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.ttf?9c4b38d2ee076064986c58f487e04136") format("truetype"),
+    url("../fonts/flaticon.woff?9c4b38d2ee076064986c58f487e04136") format("woff"),
+    url("../fonts/flaticon.woff2?9c4b38d2ee076064986c58f487e04136") format("woff2"),
+    url("../fonts/flaticon.eot?9c4b38d2ee076064986c58f487e04136#iefix") format("embedded-opentype"),
+    url("../fonts/flaticon.svg?9c4b38d2ee076064986c58f487e04136#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-squares:before {
+    content: "\f101";
+}
+.flaticon-shopping-cart:before {
+    content: "\f102";
+}
+.flaticon-money:before {
+    content: "\f103";
+}
+.flaticon-bars:before {
+    content: "\f104";
+}
+.flaticon-bill:before {
+    content: "\f105";
+}
+.flaticon-growth:before {
+    content: "\f106";
+}
+.flaticon-tech:before {
+    content: "\f107";
+}
+.flaticon-globe:before {
+    content: "\f108";
+}
+.flaticon-idea:before {
+    content: "\f109";
+}
+.flaticon-save-money:before {
+    content: "\f10a";
+}
+.flaticon-salary:before {
+    content: "\f10b";
+}
+.flaticon-economic:before {
+    content: "\f10c";
+}
+.flaticon-data-analytics:before {
+    content: "\f10d";
+}
+.flaticon-wealth:before {
+    content: "\f10e";
+}
+.flaticon-play-button:before {
+    content: "\f10f";
+}
+.flaticon-star:before {
+    content: "\f110";
+}
+.flaticon-half-tiny-star:before {
+    content: "\f111";
+}
+.flaticon-search:before {
+    content: "\f112";
+}
+.flaticon-magnifiying-glass:before {
+    content: "\f113";
+}
+.flaticon-right-arrow:before {
+    content: "\f114";
+}
+.flaticon-enter:before {
+    content: "\f115";
+}
+.flaticon-right-arrow-1:before {
+    content: "\f116";
+}
+.flaticon-right-arrow-2:before {
+    content: "\f117";
+}
+.flaticon-up-arrow:before {
+    content: "\f118";
+}
+.flaticon-angle-arrow-down:before {
+    content: "\f119";
+}
+.flaticon-shopping-cart-1:before {
+    content: "\f11a";
+}
+.flaticon-shopping-cart-2:before {
+    content: "\f11b";
+}
+.flaticon-eye:before {
+    content: "\f11c";
+}

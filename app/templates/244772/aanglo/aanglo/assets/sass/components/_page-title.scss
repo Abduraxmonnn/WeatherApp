@@ -1,0 +1,49 @@
+.page-title {
+	height: 245px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid transparentize(#858585, 0.7);
+
+	@include media-query(991px) {
+		height: 200px;
+	}
+
+	@include media-query(767px) {
+		height: auto;
+		padding: 45px 15px;
+	}
+
+	@include widther(992px) {
+		margin: 0 100px;
+	}
+
+	h2 {
+		font-size: 70px;
+		font-weight: 600;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 50px;
+		}
+
+		@include media-query(767px) {
+			font-size: 40px;
+		}
+	}
+}
+
+.page-title-s2 {
+	@extend .page-title;
+	border-bottom: 1px solid transparentize(#858585, 0.7);
+	margin-bottom: 120px;
+
+	@include media-query(991px) {
+		margin-bottom: 100px;
+	}
+
+	@include media-query(767px) {
+		margin-bottom: 80px;
+	}
+}

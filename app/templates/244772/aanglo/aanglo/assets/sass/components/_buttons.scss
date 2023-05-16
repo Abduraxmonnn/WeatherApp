@@ -1,0 +1,103 @@
+.theme-btn {
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: $heading-color;
+	display: inline-block;
+
+	@include media-query(767px) {
+		font-size: 12px;
+		margin-bottom: 15px;
+	}
+
+	svg {
+		position: relative;
+		top: 1px;
+		left: 3px;
+	}
+
+	&:hover {
+		color: $theme-primary-color;
+
+		path,
+		g {
+			fill: red;
+			stroke: red;
+		}
+	}
+}
+
+
+.theme-btn-s2 {
+	font-family: $heading-font;
+	background-color: transparentize($black, 0.2);
+	color: $white;
+	font-size: 12px;
+	font-size: calc-rem-value(12);
+	font-weight: 500;
+	padding: 16px 35px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display: inline-block;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $black;
+		color: $white;
+	}
+}
+
+.theme-btn-s3 {
+	@extend .theme-btn-s2;
+	background-color: $white;
+	color: $text-color;
+	border: 0;
+	padding: 12px 30px;
+	box-shadow: none;
+	outline: none;
+
+	@include transition-time(0.3s);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $theme-primary-color;
+		color: $white;
+	}
+}
+
+
+.view-cart-btn {
+	font-family: $heading-font;
+    background: $black;
+    width: 100%;
+    font-size: 12px;
+    font-size: calc-rem-value(12);
+    font-weight: 500;
+    font-weight: 500;
+    padding: 12px 20px;
+    color: $white;
+    color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	&:hover {
+		background-color: $theme-primary-color;
+		color: $white;
+	}
+}
+
+.checkout-btn {
+	@extend .view-cart-btn;
+
+	background-color: #545454;
+
+	&:hover {
+		background-color: $theme-primary-color;
+		color: $white;
+	}
+}

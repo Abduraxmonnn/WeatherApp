@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+	#contact-page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#3.1	contact-main-section
+--------------------------------------------------------------*/
+.contact-main-section {
+
+	.content {
+		padding-top: 100px;
+		padding-bottom: 120px;
+
+		@include media-query(991px) {
+			padding-top: 80px;
+			padding-bottom: 100px;
+		}
+
+		@include media-query(767px) {
+			padding-top: 60px;
+			padding-bottom: 80px;
+		}
+
+		@include widther(1200px) {
+			padding-left: 88px;
+			padding-right: 88px;
+		}
+
+		h3 {
+			font-size: 32px;
+			margin: 0 0 0.5em;
+
+			@include media-query(991px) {
+				font-size: 28px;
+			}
+
+			@include media-query(767px) {
+				font-size: 25px;
+			}
+		}
+
+		p {
+			margin-bottom: 1.5em;
+		}
+	}
+
+
+	.contact-form-col {
+		padding-top: 30px;
+
+		h4 {
+			font-size: 25px;
+			margin: -0.2em 0 0.3em;
+
+			@include media-query(991px) {
+				font-size: 22px;
+			}
+
+			@include media-query(767px) {
+				font-size: 20px;
+			}
+		}
+
+		p {
+			margin-bottom: 2em;
+		}
+
+		form {
+			margin: 0 -15px;
+		}
+
+		form > div {
+			width: calc(50% - 30px);
+		    float: left;
+		    margin: 0 15px 30px;
+
+		    @include media-query(600px) {
+				width: calc(100% - 30px);
+		    	float: none;
+			}
+		}
+
+		form .fullwidth {
+			width: calc(100% - 30px);
+			float: none;
+			clear: both;
+		}
+
+		input,
+		textarea,
+		select {
+			width: 100%;
+			border: 1px solid #ddd;
+			color: $text-color;
+		}
+
+		form button {
+			border: 0;
+			outline: 0;
+		}
+
+		.submit-area {
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		.theme-btn {
+			background: transparent;
+		}
+	}
+
+
+	.contact-map {
+	    height: 585px;
+	}
+
+    iframe {
+	    width: 100%;
+	    height: 100%;
+	    border: 0;
+	    outline: 0;
+	}
+}

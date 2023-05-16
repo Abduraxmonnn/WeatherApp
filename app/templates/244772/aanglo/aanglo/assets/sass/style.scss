@@ -1,0 +1,118 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Theme Name:     AAnglo - Lifestyle Personal Blog HTML Template
+Version:        1.0.0
+Author:         wp_studio
+-------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+#0.1	Theme Reset Style
+#0.2	Global Elements
+#0.3	header
+#0.4	hero-slider
+#0.5	footer
+
+
+
+--------------------------------------------------------------
+	#home-default
+--------------------------------------------------------------
+#1.1	trending-articles-section
+#1.2	recent-videos-section
+#1.3	featured-articles 
+#1.4	newsletter-section
+#1.5	instagram-section
+
+
+--------------------------------------------------------------
+	#about-page
+--------------------------------------------------------------
+#2.1	about-main-section
+
+
+--------------------------------------------------------------
+	#contact-page
+--------------------------------------------------------------
+#3.1	contact-main-section
+
+
+--------------------------------------------------------------
+	#shop-page
+--------------------------------------------------------------
+#4.1	shop-main-section
+
+
+--------------------------------------------------------------
+	#shop-single-page
+--------------------------------------------------------------
+#5.1	shop-single-section
+
+
+--------------------------------------------------------------
+	#blog-page
+--------------------------------------------------------------
+#6.1	blog-pg-section
+
+
+--------------------------------------------------------------
+	#blog-single-page
+--------------------------------------------------------------
+#7.1	blog-single-section
+
+
+--------------------------------------------------------------
+	#error-404
+--------------------------------------------------------------
+#8.1	error-404-section
+
+
+
+
+
+----------------------------------------------------------------*/
+
+// helpers
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+
+// base
+@import "base/base";
+
+
+// components
+@import "components/section-title";
+@import "components/buttons";
+@import "components/form";
+@import "components/social-links";
+@import "components/page-title";
+@import "components/preloader";
+@import "components/blog-sidebar";
+@import "components/pagination";
+@import "components/woocommerce";
+
+// layout
+@import "layout/header";
+@import "layout/hero-slider";
+@import "layout/footer";
+
+// components
+@import "components/sticky-header";
+
+
+// page
+@import "page/home-default";
+@import "page/about";
+@import "page/contact";
+@import "page/shop";
+@import "page/shop-single";
+@import "page/blog";
+@import "page/blog-single";
+@import "page/error-404";
+@import "page/cart";
+@import "page/checkout";
+
+

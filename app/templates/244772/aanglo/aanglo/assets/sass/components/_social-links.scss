@@ -1,0 +1,26 @@
+.social-links {
+	overflow: hidden;
+
+	li {
+		float: left;
+		width: 35px;
+		height: 35px;
+		margin-right: 1px;
+
+		a {
+			background-color: lighten($theme-primary-color, 10%);
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			display: block;
+			color: $white;
+			text-align: center;
+
+			&:hover {
+				background-color: $theme-primary-color;
+			}
+		}
+	}
+
+
+}

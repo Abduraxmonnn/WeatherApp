@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+	#checkout-page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#8.1	checkout-section
+--------------------------------------------------------------*/
+.checkout-section {
+	padding-top: 0;
+	
+	.checkout.woocommerce-checkout {
+		overflow: hidden;
+		clear: both;
+
+		@include widther(992px) {
+			.col2-set {
+				width: 70%;
+				float: left;
+				padding-right: 85px;
+			}
+
+			.woocommerce-checkout-review-order {
+				width: 30%;
+				float: right;
+			}
+
+			form .form-row.form-row-first, 
+			form .form-row.form-row-last, 
+			.form-row.form-row-first, 
+			.form-row.form-row-last {
+			    width: 50%;
+			    float: left;
+			}
+
+			form .form-row.form-row-first,
+			.form-row.form-row-first {
+				padding-right: 15px;
+			}
+
+			form .form-row.form-row-last,
+			.form-row.form-row-last {
+				padding-left: 15px;
+			}
+		}
+
+		.form-row label.checkbox,
+		.woocommerce-shipping-fields label.checkbox {
+			display: inline-block;
+		}
+
+		.form-row textarea {
+			height: 180px;
+		}
+	}
+}

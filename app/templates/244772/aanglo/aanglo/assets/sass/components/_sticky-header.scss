@@ -1,0 +1,25 @@
+.site-header .navigation {
+	@include transition-time(0.5s);
+}
+
+.site-header .sticky-on {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: -200px;
+}
+
+.site-header .sticky-header {
+	top: 0;
+	z-index: 10;
+	box-shadow: 5px 5px 15px transparentize($black, 0.93);
+
+	@include widther(992px) {
+		padding: 0 100px;
+	}
+
+	@include media-query(991px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

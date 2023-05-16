@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------
+	#about-page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#2.1	about-main-section
+--------------------------------------------------------------*/
+.about-main-section {
+
+	.content {
+		padding-top: 100px;
+		padding-bottom: 120px;
+
+		@include media-query(991px) {
+			padding-top: 80px;
+			padding-bottom: 100px;
+		}
+
+		@include media-query(767px) {
+			padding-top: 60px;
+			padding-bottom: 80px;
+		}
+
+		@include widther(1200px) {
+			padding-left: 88px;
+			padding-right: 88px;
+		}
+
+		p {
+			margin-bottom: 1.5em;
+		}
+	}
+
+	blockquote {
+		font-size: 20px;
+		border: 0;
+		padding: 0 0 0 100px;
+		margin: 40px 0;
+		position: relative;
+
+		@include media-query(767px) {
+			font-size: 16px;
+		}
+
+		&:before {
+			content: "";
+			@include background-style( "../images/quote.png", center center, cover, no-repeat, local );
+			width: 72px;
+			height: 58px;
+			position: absolute;
+			left: 0;
+			top: 5px;
+		}
+
+		span {
+			font-size: 14px;
+			color: #9a9a9a;
+			display: block;
+			margin: 15px 0 0;
+		}
+	}
+
+	ul {
+		margin-bottom: 40px;
+	}
+
+	ul li span {
+		font-weight: 500;
+	}
+
+	ul > li + li {
+		margin-top: 5px;
+	}
+}

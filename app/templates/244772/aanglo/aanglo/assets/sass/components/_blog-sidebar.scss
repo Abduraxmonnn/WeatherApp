@@ -1,0 +1,398 @@
+/*------------------------------------
+	blog sidebar
+------------------------------------*/
+.blog-sidebar {
+	@include widther(1200px) {
+		padding-left: 90px;
+	}
+
+	@include media-query(1199px) {
+		max-width: 300px;
+		margin-top: 80px;
+	}
+
+	@include media-query(991px) {
+		margin-top: 80px;
+		max-width: 400px;
+		background: #f9f9f9;
+		padding: 45px 25px;
+		border: 1px solid #efefef;
+	}
+
+	@include media-query(767px) {
+		margin-top: 60px;
+		max-width: 400px;
+	}
+
+	.widget {
+		h3 {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			padding-bottom: 0.4em;
+			margin: 0 0 1.3em;
+			position: relative;
+			text-transform: uppercase;
+			border-bottom: 1px solid transparentize(#656565, 0.8);
+		}
+	}
+
+	> .widget + .widget {
+		margin-top: 85px;
+	}
+
+
+	/*** search-widget ***/
+	.search-widget {
+		form div {
+			position: relative;
+		}
+
+		input {
+			background-color: transparent;
+			height: 50px;
+			font-size: 16px;
+			padding: 6px 50px 6px 20px;
+			border: 1px solid #707070;
+			border-radius: 0;
+			box-shadow: none;
+			@include transition-time(0.3s);
+		}
+
+		input:focus {
+			border-color: $theme-primary-color;
+		}
+
+		form button {
+			background: transparent;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			color: #707070;
+			border: 0;
+			outline: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border-radius: 0;
+
+			i {
+				font-size: 16px;
+			}
+		}
+	}
+
+
+	/*** about-widget ***/
+	.about-widget {
+		text-align: center;
+		padding: 35px 28px;
+		border-radius: 0;
+		box-shadow: 0px 10px 16px 5px rgba(201, 201, 201, 0.2);
+
+		.img-holder {
+			margin-bottom: 25px;
+
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		h4 {
+			font-size: 16px;
+			font-weight: 600;
+			margin: 0 0 0.3em;
+		}
+
+		h4 + span {
+			display: block;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			margin: 0;
+		}
+	}
+
+
+	/*** category-widget ***/
+	.category-widget {
+		ul {
+			list-style: none;
+		}
+
+		ul li {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+			position: relative;
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+
+			span {
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		ul > li + li {
+			margin-top: 12px;
+			padding-top: 12px;
+			border-top: 1px solid #f3f2f2;
+		}
+
+		ul a {
+			display: block;
+			color: $text-color;
+			padding-left: 25px;
+			position: relative;
+
+			&:before {
+				font-family: "Themify";
+				content: "\e628";
+				position: absolute;
+				left: 0;
+				top: 2px;
+				font-size: 11px;
+			}
+		}
+
+		ul a:hover,
+		ul li:hover:before {
+			color: $theme-primary-color;
+		}
+	}
+
+
+	/*** recent-post-widget ***/
+	.recent-post-widget {
+		.post {
+			overflow: hidden;
+		}
+
+		.posts > .post + .post {
+			margin-top: 15px;
+			padding-top: 15px;
+			border-top: 1px solid #f3f2f2;
+		}
+
+		.post .img-holder {
+			width: 100px;
+			float: left;
+		}
+
+		.post .details {
+			width: calc(100% - 100px);
+			float: left;
+			padding-left: 20px;
+		}
+
+		.post h4 {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 1.3em;
+			margin: 0.3em 0 0;
+
+			@include media-query(1199px) {
+				font-size: 14px;
+				margin: 0;
+			}
+		}
+
+		.post h4 a {
+			display: inline-block;
+			color: $heading-color;
+		}
+
+		.post h4 a:hover {
+			color: $theme-primary-color;
+		}
+
+		.post .details .date {
+			font-size: 13px;
+			font-size: calc-rem-value(13);
+			font-weight: 500;
+			color: #9a9a9a;
+			text-transform: uppercase;
+		}
+	}
+
+
+	/*** tag-widget ***/
+	.tag-widget {
+
+		ul {
+			overflow: hidden;
+			list-style: none;
+		}
+
+		ul li {
+			float: left;
+			margin: 0 8px 8px 0;
+		}
+
+		ul li a {
+			background-color: #EFEFEF;
+			font-size: 14px;
+			display: inline-block;
+			padding: 5px 14px;
+			color: $text-color;
+			border-radius: 0;
+		}
+
+		ul li a:hover {
+			background: $black;
+			color: $white;
+		}
+	}
+
+
+	/*** add-widget ***/
+	.add-widget {
+		> div {
+			position: relative;
+		}
+
+		.details {
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			@include translatingY();
+		}
+
+		h4 {
+			font-size: 20px;
+			font-weight: 600;
+			color: $white;
+			line-height: 1.4em;
+			padding-right: 35px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+
+	/*** featured-post-slider ***/
+	.featured-post-slider {
+		.post-item .details {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.inner {
+			padding: 35px;
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+		}
+
+		button {
+			background: $white;
+			font-size: 12px;
+			font-weight: 500;
+			display: inline-block;
+			padding: 7px 20px;
+			border: 0;
+			outline: 0;
+			border-radius: 50px;
+			box-shadow: 0 3px 3px transparentize($black, 0.87);
+			z-index: 9;
+		}
+
+		.date {
+			font-size: 12px;
+			color: $white;
+			font-weight: 500;
+			text-transform: uppercase;
+			margin: 1.5em 0 1em;
+			text-decoration: underline;
+		}
+
+		h4 {
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 1.3em;
+			margin: 0;
+
+			@include media-query(767px) {
+				font-size: 22px;
+			}
+		}
+
+		h4 a {
+			color: $white;
+		}
+
+		.owl-controls {
+			position: absolute;
+			right: 25px;
+			bottom: 25px;
+			margin: 0;
+		}
+
+		.owl-controls .owl-dots .owl-dot span {
+			margin: 5px 4px;
+			background: #ffffff;
+			opacity: 0.5;
+		}
+
+		.owl-controls .owl-dots .owl-dot.active span {
+			opacity: 1;
+		}
+	}
+}
+
+.blog-sidebar-s2 {
+	@extend .blog-sidebar;
+
+	@include widther(1200px) {
+		padding-left: 70px;
+	}
+
+	@include media-query(1199px) {
+		max-width: 300px;
+		margin-top: 80px;
+	}
+
+	@include media-query(991px) {
+		margin-top: 80px;
+		max-width: 400px;
+	}
+
+	@include media-query(767px) {
+		margin-top: 60px;
+		max-width: 400px;
+	}
+
+	/*** add-widget ***/
+	.add-widget {
+		> div {
+			position: relative;
+		}
+
+		.details {
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			@include translatingY();
+		}
+
+		h4 {
+			font-size: 20px;
+			font-weight: 600;
+			color: $white;
+			line-height: 1.4em;
+			padding-right: 55px;
+			margin: 0 0 1.5em;
+		}
+	}
+
+}

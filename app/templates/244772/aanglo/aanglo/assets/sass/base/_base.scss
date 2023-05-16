@@ -1,0 +1,517 @@
+/*--------------------------------------------------------------
+#0.1    Theme Reset Style
+--------------------------------------------------------------*/
+html {
+    font-size: $base-font-size + px;
+}
+
+body {
+    font-family: $base-font;
+    background-color: $body-bg-color;
+    font-size: 15px;
+    font-size: calc-rem-value(15);
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    @include media-query( 767px ) {
+        font-size: 14px;
+    }
+}
+
+p {
+    color: $text-color;
+    line-height: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    color: $heading-color;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    @include transition-time(0.2s);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+form select,
+textarea {
+    font-family: $base-font;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 12px 15px;
+
+    @include media-query(991px) {
+        padding: 10px 15px;
+    }
+
+    &:focus {
+        border: 1px solid $black;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+textarea {
+    height: 180px;
+}
+
+label {
+    font-family: $base-font;
+    font-size: 14px;
+    font-size: calc-rem-value(14);
+    color: $heading-color;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: #fff url(../images/select-arrow.png) calc(100% - 15px) 25px no-repeat;
+    background-size: 7px 4px;
+    position: relative;
+}
+
+
+/*--------------------------------------------------------------
+#0.2    Global Elements
+--------------------------------------------------------------*/
+.page-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.fi:before {
+    margin: 0;
+}
+
+.section-padding {
+    padding: 120px 0;
+
+    @include media-query(991px) {
+        padding: 100px 0;
+    }
+
+    @include media-query(767px) {
+        padding: 80px 0;
+    }
+}
+
+.container-1310 {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+
+    @media (min-width: 1450px) {
+        width: 1340px;
+    }    
+}
+
+/*** back to top **/
+.back-to-top {
+    background-color: transparentize($theme-primary-color, 0.5);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 0;
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 25px;
+    bottom: 25px;
+    @include transition-time(0.2s);
+
+    @include media-query(991px) {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    &:hover {
+        background-color: $theme-primary-color;
+    }
+}
+
+.back-to-top i {
+    font-size: 16px;
+    font-size: calc-rem-value(16);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include center-by-translating();
+}
+
+
+/** for popup image ***/
+.mfp-wrap {
+    background-color: transparentize($black, 0.1);
+    z-index: 99999;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/*** for fancybox video ***/
+.fancybox-overlay {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999 !important;
+}
+
+.fancybox-wrap {
+  z-index: 99999 !important;
+}
+
+.woocommerce form.login input[type="submit"],
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+    font-family: $heading-font;
+    background-color: transparentize($black, 0.2);
+    color: $white;
+    font-size: 12px;
+    font-size: calc-rem-value(12);
+    font-weight: 600;
+    padding: 14px 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea {
+    padding: 12px 15px;
+}
+
+.woocommerce form .form-row label.inline {
+    display: inline;
+    padding-left: 15px;
+}
+
+.woocommerce h3 {
+    font-size: 22px;
+    font-size: calc-rem-value(22);
+    margin: 1em 0 1.5em;
+}
+
+abbr, 
+abbr[title] {
+    border-bottom: 1px dotted #0a0a0a;
+    cursor: help;
+    text-decoration: none;
+}
+
+@include media-query(767px) {
+    .woocommerce form .form-row label.inline {
+        padding-left: 5px;
+    }
+}
+
+
+/*** woocommerce ***/
+.woocommerce-Button,
+.woocommerce-button {
+    background: transparentize($black, 0.1);
+    font-size: 12px;
+    font-size: calc-rem-value(12);
+    font-weight: 500;
+    font-weight: 500;
+    padding: 12px 30px;
+    color: $white;
+    margin-top: 20px;
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 0;
+
+    &:hover {
+        background: $black;
+    }
+}
+
+.woocommerce-info:before {
+    display: none;
+}
+
+.woocommerce-privacy-policy-text a {
+    font-weight: 500;
+    color: $theme-primary-color;
+    text-decoration: underline;
+}
+
+.woocommerce-error a, 
+.woocommerce-info a, 
+.woocommerce-message a,
+.lost_password a {
+    color: $text-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.woocommerce-error, .woocommerce-info, 
+.woocommerce-message {
+    font-family: $heading-font;
+    background-color: rgba(191,171,112, 0.1);
+    width: auto;
+    padding: 15px 20px;
+    border: 1px solid rgba(191,171,112, 0.2);
+    padding: 15px 15px 15px 35px;
+    margin: 0 0 2em; 
+    position: relative;
+    color: #515151;
+    list-style: none;
+    word-wrap: break-word;
+
+    @include media-query(767px) {
+        padding: 15px;
+    }
+}
+
+.woocommerce form.checkout_coupon, 
+.woocommerce form.login, 
+.woocommerce form.register {
+    padding: 34px 35px 33px;
+    border: 1px solid #E5E5E5;
+    margin: 19px 0;
+    text-align: left;
+    border-radius: 0;
+
+    @include media-query(767px) {
+        padding: 34px 20px 33px;
+    }
+}
+
+.woocommerce form .form-row .required {
+    color: red;
+    font-weight: 600;
+    border: 0;
+}
+
+.woocommerce form.login > p:not(.form-row) {
+    margin-bottom: 2em;
+}
+
+#customer_login form.login > p:not(.form-row) {
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+.woocommerce form.login input[type="submit"],
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+    font-family: $heading-font;
+    background-color: transparentize($black, 0.2);
+    color: $white;
+    font-size: 12px;
+    font-size: calc-rem-value(12);
+    font-weight: 500;
+    padding: 14px 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea {
+    padding: 12px 15px;
+}
+
+.woocommerce form .form-row label.inline {
+    display: inline;
+    padding-left: 15px;
+}
+
+.woocommerce h3 {
+    font-size: 22px;
+    font-size: calc-rem-value(22);
+    margin: 1em 0 1.5em;
+}
+
+abbr, 
+abbr[title] {
+    border-bottom: 1px dotted #0a0a0a;
+    cursor: help;
+    text-decoration: none;
+}
+
+@include media-query(767px) {
+    .woocommerce form .form-row label.inline {
+        padding-left: 5px;
+    }
+}
+
+label {
+    font-weight: 500;
+}
+
+/*** contact form error handling ***/
+.contact-validation-active {
+    .error-handling-messages {
+        width: 100% !important;
+        margin-top: 15px !important;
+    }
+
+    label.error {
+        color: red;
+        font-size: calc-rem-value(14);
+        font-weight: normal;
+        margin: 5px 0 0 0;
+        text-align: left;
+        display: block;
+    }
+
+    #loader {
+        display: none;
+        margin-top: 10px;
+
+        i {
+            font-size: 30px;
+            font-size: calc-rem-value(30);
+            color: $theme-primary-color;
+            display: inline-block;
+            -webkit-animation: rotating linear 2s infinite;
+            animation: rotating linear 2s infinite;
+        }
+    }
+
+    #success,
+    #error {
+        width: 100%;
+        color: $white;
+        padding: 5px 10px;
+        font-size: 16px;
+        text-align: center;
+        display: none;
+
+        @include media-query(767px)  {
+            font-size: 15px;
+        }
+    }
+
+    #success {
+        background-color: lighten(green, 5%);
+        border-left: 5px solid green;
+        margin-bottom: 5px;
+    }
+
+    #error {
+        background-color: lighten(red, 5%);
+        border-left: 5px solid red;
+    }
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+  -webkit-animation: rotating 5s alternate infinite;
+  animation: rotating 5s alternate infinite;
+}

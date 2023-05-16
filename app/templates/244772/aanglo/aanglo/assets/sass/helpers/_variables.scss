@@ -1,0 +1,26 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+// fonts
+$base-font-size: 15;
+$base-font: 'Roboto', sans-serif;
+$heading-font: 'Poppins', sans-serif;
+
+
+
+// color
+$dark-gray: #2a2a2a;
+$white: #fff;
+$black: #000;
+$red: #EF3211;
+$black2: #18171C;
+$black3: #232226;
+$mid-gray: #818181;
+
+$theme-primary-color: $red;
+$body-bg-color: $white;
+$section-bg-color: #edecec;
+$text-color: $black3;
+$heading-color: $black2;
